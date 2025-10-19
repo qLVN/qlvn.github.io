@@ -1,170 +1,258 @@
+
+/* YOU MIGHT HAVE NOTICED CODE STYLING CHANGED SINCE THE LAST COMMIT?
+ KNOWING THIS PAGE WAS AN OLD MESS AND CONSIDERING I DID NOT HAVE ANY ENERGY TO REDO IT I TRIED GIVING IT TO GEMINI 2.5 PRO:
+ IT WAS PERFECT AND PERFECTLY ADAPTED TO THE PAGE'S STYLE AND MADE ADJUSTMENTS/FIXES EXACTLY HAS I WANTED IT.
+ MANY DEVELOPERS WILL LOSE THEIR JOBS.... */
+
+/* --- General Styles --- */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
 header {
-    top: 0px !important;
+    top: 0 !important;
     opacity: 1 !important;
     animation: none !important;
+    flex-shrink: 0; /* Prevents header from shrinking */
 }
 
-header .usable-wrapper h1.anim {
-    opacity: 1 !important;
-    animation: none !important;
-}
-
+header .usable-wrapper h1.anim,
 header .usable-wrapper .right-panel div.selected {
     opacity: 1 !important;
     animation: none !important;
 }
 
-.navbar {
-    position: absolute;
-    top: 60px;
-    left: 0px;
-    width: 400;
-    height: calc(100% - 60px);
-    background: #ffffff21;
+/* --- Main Container --- */
+.project-container {
+    display: flex;
+    flex-grow: 1; /* Allows main to take up remaining space */
+    margin-top: 60px; /* Header height */
+    overflow: hidden; /* Prevents overflow */
 }
 
-.navbar div {
-    display: block;
-    position: relative;
-    text-align: left;
-    height: 40px;
-    padding-left: 50px;
-    font-family: 'SFProDisplay', sans-serif;
-    font-weight: bold;
-    line-height: 40px;
-    font-size: 20px;
-    font-weight: 400;
-    cursor: pointer;
-
-    transition: ease-out .3s background-color;
+/* --- Side Navigation Bar --- */
+.navbar {
+    width: 300px;
+    flex-shrink: 0;
+    background: #2c2c2c;
+    overflow-y: auto;
+    padding: 20px 0;
+    transition: transform 0.3s ease-in-out;
 }
 
 .navbar h4 {
     font-family: 'akira_expanded', sans-serif;
-    margin: 0px 0px 2px 10px;
-    padding-top: 20px;
+    margin: 20px 0 10px 15px;
     opacity: .7;
     letter-spacing: 2px;
     user-select: none;
+    font-size: 1em;
+    color: #a0a0a0;
 }
 
-.navbar div img {
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    width: 30px;
-    transition: .2s ease-out;
+.navbar .nav-item {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding-left: 15px;
+    font-family: 'SFProDisplay', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: ease-out .2s background-color, ease-out .2s color;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.navbar div:hover {
-    background-color: #292929;
+.navbar .nav-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    transition: .2s ease-out transform;
 }
 
-.navbar div:hover img {
-    transform: rotate(-3deg);
+.navbar .nav-item:hover {
+    background-color: #3a3a3a;
+    color: white;
 }
 
-.navbar div:active {
+.navbar .nav-item:active {
     background-color: #1d1d1d; 
 }
 
-.navbar div:active img {
-    transform: rotate(-3deg) scale(.8);
-}
-
-.navbar div span {
-    position: absolute;
-    top: 0px;
-    right: 20px;
-    font-family: 'SFProDisplay', sans-serif;
+.navbar .nav-item span {
+    margin-left: auto;
+    padding-right: 15px;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 14px;
     color: gray;
     font-style: italic;
 }
 
-.navbar-display {
-    height: calc(100% - 60px);
-    width: calc(100% - 400px);
-    position: absolute;
-    right: 0px;
-    top: 60px;
-}
-
-.navbar-display div {
-    position: absolute;
-    right: 0px;
-    bottom: 0px;
-    visibility: hidden;
-    padding: 50px;
+/* --- Project Display Area --- */
+.project-display {
+    flex-grow: 1;
+    position: relative;
     overflow-y: auto;
-    height: calc(100% - 100px);
-    width: calc(100% - 100px);
+    padding: 40px;
 }
 
-.navbar-display h1 {
+.project-content {
+    display: none; /* Hidden by default */
+}
+
+.project-content.active {
+    display: block; /* Shown when active */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.project-display h1 {
     font-family: 'SFProDisplay', sans-serif;
-    font-size: 32pt;
-    margin: 0px;
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
 }
 
-.navbar-display img {
-    cursor: pointer;
-    margin-top: 30px;
-    margin-right: 40px;
+.project-display h2.sub-heading {
+    font-family: 'SFProDisplay', sans-serif;
+    font-size: 1.8rem;
+    margin-top: 40px;
 }
 
-.navbar-display a {
+.project-display p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    max-width: 800px; /* For better readability */
+}
+
+.project-display p.caption {
+    opacity: .7;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.project-display a {
     text-decoration: underline;
-    color: white;
-    border-radius: 2px;
+    color: #8ab4f8;
+    transition: background-color 0.2s, color 0.2s;
 }
 
-.navbar-display a:hover {
-    background-color: white;
+.project-display a:hover {
+    background-color: #8ab4f8;
     text-decoration: none;
     color: black;
 }
 
-.navbar-display a:active {
-    background-color: rgb(194, 194, 194);
+.project-display ul {
+    list-style: square;
+    padding-left: 20px;
 }
 
-.navbar-display #Select {
-    visibility: visible;
-    height: calc(100% - 130px);
-    width: 100%;
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    padding: 130px 0px 0px 0px;
+.project-display img {
+    cursor: pointer;
+    margin-top: 30px;
+    margin-right: 40px;
+    height: auto;
+    max-width: 100%; /* Ensures images scale down on small screens */
 }
 
-.navbar-display #Select h1, .navbar-display #Select p {
+.project-display #Select {
     text-align: center;
-    margin: 0px;
+    padding-top: 15vh;
+}
+.project-display #Select h1, 
+.project-display #Select p {
+    margin: 0;
 }
 
-@media only screen and (max-width: 770px) {
+/* --- Mobile Specific --- */
+#mobile-back-button {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #3a3a3a;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1001;
+    font-family: 'SFProDisplay', sans-serif;
+    font-size: 1rem;
+}
+
+/* --- Responsive Design --- */
+@media only screen and (max-width: 900px) {
+    .project-container {
+        flex-direction: column;
+    }
+
     .navbar {
-        position: relative;
         width: 100%;
-        height: fit-content;
-        margin-bottom: 50px;
-        z-index: 1;
+        height: auto;
+        padding: 0;
+        margin-bottom: 0;
+        border-bottom: 1px solid #444;
+        z-index: 1000;
+        display: block;
     }
 
-    .navbar-display {
-        position: unset;
-        height: 500px;
-        width: 100%;
+    .project-display {
+        padding: 25px;
+        display: none; /* Hide content by default on mobile */
     }
 
-    .navbar-display div, .navbar-display #Select {
-        overflow-y: hidden;
-        height: unset;
-        left: 0px;
-        right: unset;
-        bottom: unset;
+    /* State for when a project is selected on mobile */
+    body.mobile-project-view .navbar {
+        display: none;
+    }
+
+    body.mobile-project-view .project-display {
+        display: block;
+    }
+
+    body.mobile-project-view #mobile-back-button {
+        display: block;
+    }
+
+    .project-display h1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .project-display img {
+        margin-right: 0;
+        width: 100%; /* Make images full-width on small mobile */
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .navbar .nav-item span {
+        display: none; /* Hide project type on mobile to save space */
+    }
+
+    .project-display {
+        padding: 15px;
+    }
+
+     .project-display h1 {
+        font-size: 1.5rem;
+    }
+
+    .project-display p {
+        font-size: 0.95rem;
     }
 }

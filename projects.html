@@ -1,18 +1,22 @@
-<!-- 
-Some elements of this page are 4 years old (or more), so don't mind if some (or many) things are nasty here
---->
+
+<!-- YOU MIGHT HAVE NOTICED CODE STYLING CHANGED SINCE THE LAST COMMIT?
+ KNOWING THIS PAGE WAS AN OLD MESS AND CONSIDERING I DID NOT HAVE ANY ENERGY TO REDO IT I TRIED GIVING IT TO GEMINI 2.5 PRO:
+ IT WAS PERFECT AND PERFECTLY ADAPTED TO THE PAGE'S STYLE AND MADE ADJUSTMENTS/FIXES EXACTLY HAS I WANTED IT.
+ MANY DEVELOPERS WILL LOSE THEIR JOBS.... -->
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>LVN - PROJECTS</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
-        <link rel="icon" href="assets\favicon.ico">
-        <link rel="stylesheet" href="css\projects.css">
-        <link rel="stylesheet" href="css\reworked_main.css">
+        <link rel="icon" href="assets/favicon.ico">
+        <link rel="stylesheet" href="css/reworked_main.css">
+        <link rel="stylesheet" href="css/projects.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" xintegrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    
         <script src="js/main.js"></script>
         <script src="js/otherprojects.js"></script>
     </head>
@@ -29,146 +33,188 @@ Some elements of this page are 4 years old (or more), so don't mind if some (or 
                 <div></div>
             </div>
         </header>
-        <div class="navbar">
-            <div onclick="otherProjectsNavbarSelect('bdh')">BasicDockHider<span>iOS Tweak</span><img src="assets/projects/bdh/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('disqueplatine')">DisquePlatine<span>Spotify Bot</span><img src="assets/projects/DisquePlatine/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('edbruteforce')">EDBruteForce<span>Tool</span><img src="assets/projects/EDBruteForce/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('elb')">ELB<span>Website</span><img src="assets/projects/ELB/no-reflections.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('music')">Music for Windows<span>Desktop App</span><img src="assets/projects/Music/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('wd')">WazeDecoy<span>Program</span><img src="assets/projects/WazeDecoy/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('rlt')">RLTrader<span>Desktop App</span><img src="assets/projects/RLTrader/icon.png" /></div>
-            <h4>SCRAPED</h4>
-            <div onclick="otherProjectsNavbarSelect('ultima')">Project Ultima2<span>Minecraft Network</span><img src="assets/projects/Ultima/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('veddy')">Veddy<span>iOS Theme</span><img src="assets/projects/Veddy/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('emer')">Emer<span>iOS Tweak</span><img src="assets/projects/Emer/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('ethswitcher')">ETHSwitcher<span>Desktop Tools</span><img src="assets/projects/nologo.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('hs')">HapticSystem<span>iOS Tweak</span><img src="assets/projects/HapticSystem/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('lig')">LIG<span>Desktop App</span><img src="assets/projects/LIG/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('slashslash')">SlashSlash<span>iOS Widget</span><img src="assets/projects/SlashSlash/icon.png" /></div>
-            <div onclick="otherProjectsNavbarSelect('sowy')">Sowy<span>iOS Theme</span><img src="assets/projects/Sowy/icon.png" /></div>
-            <h4>MORE</h4>
-            <div onclick="linkTo('https://github.com/qLVN', 'newpage')">Check out my GitHub page<span> </span><img src="assets/projects/github.png" /></div>
-        </div>
-        <div class="navbar-display">
-            <div name="bdh">
-                <h1>BasicDockHider</h1>
-                <p>It's my first tweak that really came on a repo, of course it is not really complicated but hey, you gotta start somewhere</p>
-                <p>If you did not understood by the title, this tweak is allowing users to hide their dock background or precisely its opacity.</p>
-                <p>You can get it on the Twickd repo: https://repo.twickd.com (<u><a href="https://repo.twickd.com/package/com.twickd.liven.basicdockhider" target="_blank">Tweak page</a></u>)</p>
-                <img src="assets/projects/bdh/show1.jpeg" onclick='linkTo("assets/projects/bdh/show1.jpeg", "newpage")' style="border-radius: 10px; width: 280px;" /><img src="assets/projects/bdh/show2.jpeg" onclick='linkTo("assets/projects/bdh/show2.jpeg", "newpage")' style="border-radius: 10px; width: 280px;" /><img src="assets/projects/bdh/show3.jpeg" onclick='linkTo("assets/projects/bdh/show3.jpeg", "newpage")' style="border-radius: 10px; width: 280px;" />
+
+        <main class="project-container">
+            <nav class="navbar">
+                <h4>PROJECTS</h4>
+                <div class="nav-item" data-target="bdh"><img src="assets/projects/bdh/icon.png" alt="BasicDockHider Icon"/>BasicDockHider<span>iOS Tweak</span></div>
+                <div class="nav-item" data-target="disqueplatine"><img src="assets/projects/DisquePlatine/icon.png" alt="DisquePlatine Icon"/>DisquePlatine<span>Spotify Bot</span></div>
+                <div class="nav-item" data-target="edbruteforce"><img src="assets/projects/EDBruteForce/icon.png" alt="EDBruteForce Icon"/>EDBruteForce<span>Tool</span></div>
+                <div class="nav-item" data-target="elb"><img src="assets/projects/ELB/no-reflections.png" alt="ELB Icon"/>ELB<span>Website</span></div>
+                <div class="nav-item" data-target="music"><img src="assets/projects/Music/icon.png" alt="Music for Windows Icon"/>Music for Windows<span>Desktop App</span></div>
+                <div class="nav-item" data-target="wd"><img src="assets/projects/WazeDecoy/icon.png" alt="WazeDecoy Icon"/>WazeDecoy<span>Program</span></div>
+                <div class="nav-item" data-target="rlt"><img src="assets/projects/RLTrader/icon.png" alt="RLTrader Icon"/>RLTrader<span>Desktop App</span></div>
+                <h4>SCRAPED</h4>
+                <div class="nav-item" data-target="ultima"><img src="assets/projects/Ultima/icon.png" alt="Ultima Icon"/>Project Ultima2<span>Minecraft Network</span></div>
+                <div class="nav-item" data-target="veddy"><img src="assets/projects/Veddy/icon.png" alt="Veddy Icon"/>Veddy<span>iOS Theme</span></div>
+                <div class="nav-item" data-target="emer"><img src="assets/projects/Emer/icon.png" alt="Emer Icon"/>Emer<span>iOS Tweak</span></div>
+                <div class="nav-item" data-target="ethswitcher"><img src="assets/projects/nologo.png" alt="ETHSwitcher Icon" />ETHSwitcher<span>Desktop Tools</span></div>
+                <div class="nav-item" data-target="hs"><img src="assets/projects/HapticSystem/icon.png" alt="HapticSystem Icon"/>HapticSystem<span>iOS Tweak</span></div>
+                <div class="nav-item" data-target="lig"><img src="assets/projects/LIG/icon.png" alt="LIG Icon"/>LIG<span>Desktop App</span></div>
+                <div class="nav-item" data-target="slashslash"><img src="assets/projects/SlashSlash/icon.png" alt="SlashSlash Icon"/>SlashSlash<span>iOS Widget</span></div>
+                <div class="nav-item" data-target="sowy"><img src="assets/projects/Sowy/icon.png" alt="Sowy Icon"/>Sowy<span>iOS Theme</span></div>
+                <h4>MORE</h4>
+                <div class="nav-item" onclick="linkTo('https://github.com/qLVN', 'newpage')"><img src="assets/projects/github.png" alt="GitHub Icon"/>Check out my GitHub page<span>&nbsp;</span></div>
+            </nav>
+    
+            <div class="project-display">
+                <button id="mobile-back-button">Show List</button>
+                <div id="Select" class="project-content active">
+                    <h1>Welcome to my projects page</h1>
+                    <p>Please select a category, it's cold out there.</p>
+                </div>
+
+                <div id="error" class="project-content">
+                    <h1>Error</h1>
+                    <p>An error happened. The specified project was not found.</p>
+                </div>
+
+                <div id="bdh" class="project-content">
+                    <h1>BasicDockHider</h1>
+                    <p>It's my first tweak that really came on a repo, of course it is not really complicated but hey, you gotta start somewhere.</p>
+                    <p>If you did not understood by the title, this tweak is allowing users to hide their dock background or precisely its opacity.</p>
+                    <p>You can get it on the Twickd repo: https://repo.twickd.com (<u><a href="https://repo.twickd.com/package/com.twickd.liven.basicdockhider" target="_blank">Tweak page</a></u>)</p>
+                    <div>
+                        <img src="assets/projects/bdh/show1.jpeg" onclick='linkTo(this.src, "newpage")' alt="Screenshot 1 of BasicDockHider" style="border-radius: 10px; width: 280px;" />
+                        <img src="assets/projects/bdh/show2.jpeg" onclick='linkTo(this.src, "newpage")' alt="Screenshot 2 of BasicDockHider" style="border-radius: 10px; width: 280px;" />
+                        <img src="assets/projects/bdh/show3.jpeg" onclick='linkTo(this.src, "newpage")' alt="Screenshot 3 of BasicDockHider" style="border-radius: 10px; width: 280px;" />
+                    </div>
+                </div>
+
+                <div id="elb" class="project-content">
+                    <h1>ELB's Website</h1>
+                    <p>It's a website that I made for <a href="https://www.youtube.com/channel/UCyliodSSktUc2sZnZWg-jmA" target="_blank">ELB</a>.</p>
+                    <p>It's a "lobby" for Grand Theft Auto V Mods and Cheats, basically. <a href="https://elbmodzz.com/" target="_blank">Link here</a></p>
+                </div>
+
+                <div id="disqueplatine" class="project-content">
+                    <h1>DisquePlatine</h1>
+                    <p>My Spotify botting tool, which is almost fully done (as of what I remember).</p>
+                    <p>It allows user to connect automatically their accounts and play a song with them from all over the world (faking IPs/User-Agents...).</p>
+                    <p>The only part that is not done (as of what I remember again) is the song management (for now you have to start it by yourself and it's not skipping automatically when it has been played enough to count it as a stream).</p>
+                    <p>It's available on my GitHub at <a href="https://github.com/qLVN/DisquePlatine" target="_blank">this address</a>.</p>
+                    <img src="assets/projects/DisquePlatine/image1.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot of DisquePlatine" style="border-radius: 10px; max-width: 85%;" />
+                    <p class="caption">(It does not work on the picture because I did not enter valid accounts for the bot to use.)</p>
+                </div>
+                
+                <div id="edbruteforce" class="project-content">
+                    <h1>EDBruteForce</h1>
+                    <p>This is a simple Objective-C tool I made to bruteforce passwords for a given user on EcoleDirecte (Which is a french ENT/VLT).</p>
+                    <p>It's available on my GitHub at <a href="https://github.com/qLVN/EDBruteforce" target="_blank">this address</a>.</p>
+                    <p class="caption">(Just saying: I, of course, never used it for something other than testing the program and I don't support anybody using it for whatever reason.)</p>
+                </div>
+
+                <div id="rlt" class="project-content">
+                    <h1>RLTrader</h1>
+                    <p>A simple app to manage your Rocket League inventory. It allows you to get a global view of the values of your items, see if you are making benefits or you are losing money.</p>
+                    <p>This project, unlike lots of other projects of mine, works and is usable (as of mid-2022).</p>
+                    <p>It's available on my GitHub at <a href="https://github.com/qLVN/rltrader-app" target="_blank">this address</a>.</p>
+                    <div>
+                        <img src="assets/projects/RLTrader/image1.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 1 of RLTrader" style="border-radius: 10px; max-width: 85%;" />
+                        <img src="assets/projects/RLTrader/image2.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 2 of RLTrader" style="border-radius: 10px; max-width: 85%;" />
+                        <img src="assets/projects/RLTrader/image3.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 3 of RLTrader" style="border-radius: 10px; max-width: 85%;" />
+                    </div>
+                </div>
+
+                <div id="emer" class="project-content">
+                    <h1>Emer</h1>
+                    <p>This was the biggest tweak project that I ever made before I couldn't code anymore on iOS, I can't find any screenshots for now.</p>
+                    <p>The repository of the last build I could find is available <a href="https://github.com/qLVN/emer" target="_blank">here</a>.</p>
+                </div>
+
+                <div id="ethswitcher" class="project-content">
+                    <h1>ETHSwitcher</h1>
+                    <p>It's a desktop app that I made on Java and C#, it's only made for my personal use BUT it's open source, so you can modify it to make it yours (The Java one has a GUI but it's not stable and the C# is only a Console/Terminal app, I started to work on a C# GUI but never finshed it because the console one is okay for me.)</p>
+                    <p>What does it do ? It helps you if you have to switch between personal hotspot and your network a lot, for instance.<br />It disables and enables your interfaces to make you switch from network A to network B.<br />This can be a very big app but I only made it so it responds to what I want it to do.</p>
+                    <div>
+                        <img src="assets/projects/ETHSwitcher/cs-console.png" onclick='linkTo(this.src, "newpage")' alt="ETHSwitcher Console Version" style="width: 65%; box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" />
+                        <img src="assets/projects/ETHSwitcher/java.png" onclick='linkTo(this.src, "newpage")' alt="ETHSwitcher Java GUI" style="box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); width: 400px;" />
+                    </div>
+                </div>
+
+                <div id="hs" class="project-content">
+                    <h1>HapticSystem</h1>
+                    <p>I will never release this one on a big repo, why ? Just found out that it has already been made. Check <a target="_blank" href="https://repo.litten.love/depictions/rse/">Litten's Rose tweak</a> on her repo: https://repo.litten.love</p>
+                    <p>Everything was made so I can release it s0n but no, anyway if you still want it: you can, I can give you the .deb, just ask me!</p>
+                    <div>
+                        <img src="assets/projects/HapticSystem/show1.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 1 of HapticSystem" style="border-radius: 10px; width: 280px;" />
+                        <img src="assets/projects/HapticSystem/show2.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 2 of HapticSystem" style="border-radius: 10px; width: 280px;" />
+                        <img src="assets/projects/HapticSystem/show3.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 3 of HapticSystem" style="border-radius: 10px; width: 280px;" />
+                    </div>
+                </div>
+
+                <div id="lig" class="project-content">
+                    <h1>LIG</h1>
+                    <p>It's a Java app that was made to simplify iOS icon resizing, with LIG, you can resize your icons to @3x, @2x, ~ipad etc.<br />This project is scraped.</p>
+                    <p>That way you can rename potato.png (512px) into potatoLITTLE (128px) & potatoCATCEN.png (400px).</p>
+                    <img src="assets/projects/LIG/show.jpg" onclick='linkTo(this.src, "newpage")' alt="Screenshot of LIG" style="width: 400px;" />
+                </div>
+
+                <div id="music" class="project-content">
+                    <h1>Music for Windows</h1>
+                    <img src="assets/projects/Music/app.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot of Music for Windows" style="border-radius: 10px; max-width: 85%;" />
+                    <p>This is one of my biggest projects, so basically, iTunes for Windows is a complete mess, and the music.apple.com is awfully slow. This is why I started an Apple Music app for Windows, it's still WIP, I have to finish the connection system (almost the only thing I need to do before releasing a beta or something) because now you have to manually enter your tokens.</p>
+                    <p>(And it has dark mode, yes).</p>
+                </div>
+                
+                <div id="slashslash" class="project-content">
+                    <h1>SlashSlash</h1>
+                    <p>SlashSlash is my first iOS widget (for XenHTML), it is a lockscreen clock & date widget.</p>
+                    <p>It does not require XenInfo and is customizable (as you can see in the screenshots below).</p>
+                    <p>This project is scraped, but it works, just compile it: <a href="https://github.com/qLVN/SlashSlash">GitHub repository</a>.</p>
+                    <div>
+                        <img src="assets/projects/SlashSlash/show1.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 1 of SlashSlash" style="border-radius: 10px; width: 280px;" />
+                        <img src="assets/projects/SlashSlash/settings.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 2 of SlashSlash" style="border-radius: 10px; width: 280px;" />
+                    </div>
+                </div>
+
+                <div id="sowy" class="project-content">
+                    <h1>Sowy</h1>
+                    <p>Sowy is my first real iOS theme project, its a "calligraphy-style" theme, icons are made with a specific brush.<br />I only made some icons, and guess what, this project is scraped.</p>
+                    <p>Below is the only icons that I ever revealed. There are my base icons for the theme (becauses it's the icons I'm the most satisfied of.)</p>
+                    <img src="assets/projects/Sowy/show1.jpeg" onclick='linkTo(this.src, "newpage")' alt="Showcase of Sowy theme" style="border-radius: 10px; width: 500px; box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" />
+                </div>
+
+                <div id="ultima" class="project-content">
+                    <h1>Project Ultima2</h1>
+                    <p>It all started in the end of 2017, me and some friends started making a Minecraft Server (as every kid at this time). It was a cheap server but I started doing every games in Skript (A simplified Minecraft coding language).<br />The server was based on the Rush minigame that is played (and still played now) by 50-60% of the French MC community. And after almost a year, it closed because I wasn't playing MC anymore.</p>
+                    <div>
+                        <img src="assets/projects/Ultima/show1.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 1 of Ultima" style="border-radius: 10px; width: 500px;" />
+                        <img src="assets/projects/Ultima/show2.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot 2 of Ultima" style="border-radius: 10px; width: 500px;" />
+                    </div>
+                    <h2 class="sub-heading">Ultima2 - Restarting from Zero</h2>
+                    <p>And there we go, nostalgia hits and me and a friend, in January 2019 we decide to restart from <b>ZERO</b>, and recreate all but better. Only ProtocolLib as external plugin, every plugin will be made by <u>US</u>. Time flies and the server is almost ready but we dont really wanna keep working on it, idk if it will come a day but with this year of hard-work, we learned a lot, was fun.</p>
+                    <h2 class="sub-heading">Not only a server, a whole network</h2>
+                    <p>That's right, I worked myself a lot on the website. But this one is special, it is the center of the network, the plans where to have synchronized accounts between MC, the Website and the Discord Server (Spoiler: it is done). With that, you can chat with everyone on every platform, your IG rank doesn't only give you IG perks, but also Discord rewards and websites things. We can (with webhooks and a JSONAPI) control the network from the Website's admin panel, we can ban members from the network, write news, open/close/whitelist users etc...</p>
+                    <p>All of this data where stored and synchronized between the website database and a MC plugin entierly made made by <u>@Thalrod_</u>.</p>
+                    <p>Current project progress:</p>
+                    <ul>
+                        <li>Website : 90%</li>
+                        <li>Discord bot and webhooks : 30%</li>
+                        <li>Minecraft server : 80%</li>
+                        <li>Minecraft webhooks and JSONAPI : 100%</li>    
+                    </ul>
+                    <img src="assets/projects/Ultima/pluglist.png" onclick='linkTo(this.src, "newpage")' alt="Ultima plugins list" style="border-radius: 10px; width: 180px; box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" />
+                    <p><b>EDIT: My contributions on this project are now open source!</b></p>
+                </div>
+
+                <div id="veddy" class="project-content">
+                    <h1>Veddy</h1>
+                    <p>This theme was supposed to be released, but I never did it for some reason. It is 99% done, and if you want to use it, just tell me and I will eventually get motivated to finally release it.</p>
+                    <img src="assets/projects/Veddy/show1.png" onclick='linkTo(this.src, "newpage")' alt="Showcase of Veddy theme" style="border-radius: 10px; width: 65%; box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" />
+                </div>
+
+                <div id="wd" class="project-content">
+                    <h1>WazeDecoy</h1>
+                    <p>PROJECT UPDATE: I will eventually release a GUI version of WazeDecoy, with that you will be able to place any decoy anywhere.</p>
+                    <p>This is a C# program that, yes, place decoys on Waze. With that I place police around my house so people "slow down", at the beggining it was quite a joke but it turned into a reality.</p>
+                    <p>To achieve that, I used web proxy software to intercept Waze requests with its Protobuf API (www.rtproxy.waze) and I basically copied the login commands and the decoy placing command. No API token or anything, and I can also place decoy everywhere I want and create virtual traffic jams without being there.</p>
+                    <p>This flaw is really powerfull and can lead to false informations in the app, or just by totally flooding the Waze map by fake reports.</p>
+                    <img src="assets/projects/WazeDecoy/show1.png" onclick='linkTo(this.src, "newpage")' alt="Screenshot of WazeDecoy" style="width: 65%; box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" />
+                    <p>And I installed the program on a Raspberry Pi Zero (on raspbian buster) to make it run 24/7. (It's still C#, I used <a href="https://www.mono-project.com/" target="_blank">Mono</a> to run it on Raspbian.)</p>
+                </div>
             </div>
-            <div name="elb">
-                <h1>ELB's Website</h1>
-                <p>It's a website that I made for <a href="https://www.youtube.com/channel/UCyliodSSktUc2sZnZWg-jmA" target="_blank">ELB</a>.</p>
-                <p>It's a "lobby" for Grand Theft Auto V Mods and Cheats, basically. <a href="https://elbmodzz.com/" target="_blank">Link here</a></p>
-            </div>
-            <div name="disqueplatine">
-                <h1>DisquePlatine</h1>
-                <p>My Spotify botting tool, which is almost fully done (as of what I remember)</p>
-                <p>It allows user to connect automatically their accounts and play a song with them from all over the world (faking IPs/User-Agents...)</p>
-                <p>The only part that is not done (as of what I remember again) is the song management (for now you have to start it by yourself and it's not skipping automatically when it has been played enough to count it as a stream)</p>
-                <p>It's available on my GitHub at <a href="https://github.com/qLVN/DisquePlatine" target="_blank">this address</a></p>
-                <img src="assets/projects/DisquePlatine/image1.png" onclick='linkTo(this.src, "newpage")' style="border-radius: 10px; max-width: 85%;" />
-                <p style="opacity: .5;">(It does not work on the picture because I did not enter valid accounts for the bot to use.)</p>
-            </div>
-            <div name="edbruteforce">
-                <h1>EDBruteForce</h1>
-                <p>This is a simple Objective-C tool I made to bruteforce passwords for a given user on EcoleDirecte (Which is a french ENT/VLT)</p>
-                <p>It's available on my GitHub at <a href="https://github.com/qLVN/EDBruteforce" target="_blank">this address</a></p>
-                <p style="opacity: .5;">(Just saying: I, of course, never used it for something other than testing the program and I don't support anybody using it for whatever reason.)</p>
-            </div>
-            <div name="rlt">
-                <h1>RLTrader</h1>
-                <p>A simple app to manage your Rocket League inventory. It allows you to get a global view of the values of your items, see if you are making benefits or you are losing money.</p>
-                <p>This project, unlike lots of other projects of mine, works and is usable (as of mid-2022)</p>
-                <p>It's available on my GitHub at <a href="https://github.com/qLVN/rltrader-app" target="_blank">this address</a></p>
-                <img src="assets/projects/RLTrader/image1.png" onclick='linkTo("assets/projects/RLTrader/image1.png", "newpage")' style="border-radius: 10px; max-width: 85%;" />
-                <img src="assets/projects/RLTrader/image2.png" onclick='linkTo("assets/projects/RLTrader/image2.png", "newpage")' style="border-radius: 10px; max-width: 85%;" />
-                <img src="assets/projects/RLTrader/image3.png" onclick='linkTo("assets/projects/RLTrader/image3.png", "newpage")' style="border-radius: 10px; max-width: 85%;" />
-            </div>
-            <div name="emer">
-                <h1>Emer</h1>
-                <p>This was the biggest tweak project that I ever made before I couldn't code anymore on iOS, I can't find any screenshots for now</p>
-                <p>The repository of the last build I could find is available <a href="https://github.com/qLVN/emer" target="_blank">here</a></p>
-            </div>
-            <div name="ethswitcher">
-                <h1>ETHSwitcher</h1>
-                <p>It's a desktop app that I made on Java and C#, it's only made for my personal use BUT it's open source, so you can modify it to make it yours (The Java one has a GUI but it's not stable and the C# is only a Console/Terminal app, I started to work on a C# GUI but never finshed it because the console one is okay for me.)</p>
-                <p>What does it do ? It helps you if you have to switch between personal hotspot and your network a lot, for instance<br />It disables and enables your interfaces to make you switch from network A to network B.<br />This can be a very big app but I only made it so it responds to what I want it to do<p></p>
-                <img src="assets/projects/ETHSwitcher/cs-console.png" onclick='linkTo("assets/projects/ETHSwitcher/cs-console.png", "newpage")' style="width: 65%; -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" /><img src="assets/projects/ETHSwitcher/java.png" onclick='linkTo("assets/projects/ETHSwitcher/java.png", "newpage")' style="-webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); width: 400;" />
-            </div>
-            <div name="hs">
-                <h1>HapticSystem</h1>
-                <p>I will never release this one on a big repo, why ? Just found out that it has already been made. Check <a target="_blank" href="https://repo.litten.love/depictions/rse/">Litten's Rose tweak</a> on her repo: https://repo.litten.love</p>
-                <p>Everything was made so I can release it s0n but no, anyway if you still want it: you can, I can give you the .deb, just ask me on <a href="https://twitter.com/LivenOff"><i style="color: #00acee;" class="fab fa-twitter"></i> <u>@LivenOff</a></u> !</p>
-                <img src="assets/projects/HapticSystem/show1.png" onclick='linkTo("assets/projects/HapticSystem/show1.png", "newpage")' style="margin-right: 40; border-radius: 10px; width: 280px;" /><img src="assets/projects/HapticSystem/show2.png" onclick='linkTo("assets/projects/HapticSystem/show2.png", "newpage")' style="margin-right: 40; border-radius: 10px; width: 280px;" /><img src="assets/projects/HapticSystem/show3.png" onclick='linkTo("assets/projects/HapticSystem/show3.png", "newpage")' style="border-radius: 10px; width: 280px;" />
-            </div>
-            <div name="lig">
-                <h1>LIG</h1>
-                <p>It's a Java app that was made to simplify iOS icon resizing, with LIG, you can resize your icons to @3x, @2x, ~ipad etc<br />This project is scraped</p>
-                <p>That way you can rename potato.png (512px) into potatoLITTLE (128px) & potatoCATCEN.png (400px)</p>
-                <img src="assets/projects/LIG/show.jpg" onclick='linkTo("assets/projects/LIG/show.jpg", "newpage")' style="width: 400;" />
-            </div>
-            <div name="music">
-                <h1>Music for Windows</h1>
-                <img src="assets/projects/Music/app.png" onclick='linkTo("assets/projects/Music/app.png", "newpage")' style="border-radius: 10px; max-width: 85%;" />
-                <p>This is one of my biggest projects, so basically, iTunes for Windows is a complete mess, and the music.apple.com is awfully slow. This is why I started an Apple Music app for Windows, it's still WIP, I have to finish the connection system (almost the only thing I need to do before releasing a beta or something) because now you have to manually enter your tokens.</p>
-                <p>(And it has dark mode, yes)</p>
-            </div>
-            <div name="slashslash">
-                <h1>SlashSlash</h1>
-                <p>SlashSlash is my first iOS widget (for XenHTML), it is a lockscreen clock & date widget.</p>
-                <p>It does not require XenInfo and is customizable (as you can see in the screenshots below).</p>
-                <p>This project is scraped, but it works, just compile it: <a href="https://github.com/qLVN/SlashSlash">GitHub repository</a></p>
-                <img src="assets/projects/SlashSlash/show1.png" onclick='linkTo("assets/projects/SlashSlash/show1.png", "newpage")' style="margin-right: 40; border-radius: 10px; width: 280px;" /><img src="assets/projects/SlashSlash/settings.png" onclick='linkTo("assets/projects/SlashSlash/settings.png", "newpage")' style="margin-right: 40; border-radius: 10px; width: 280px;" />
-            </div>
-            <div name="sowy">
-                <h1>Sowy</h1>
-                <p>Sowy is my first real iOS theme project, its a "calligraphy-style" theme, icons are made with a specific brush.<br />I only made some icons, and guess what, this project is scraped</p>
-                <p>Below is the only icons that I ever revealed. There are my base icons for the theme (becauses it's the icons I'm the most satisfied of.)</p>
-                <img src="assets/projects/Sowy/show1.jpeg" onclick='linkTo("assets/projects/Sowy/show1.jpeg", "newpage")' style="border-radius: 10px; width: 500px; -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" />
-            </div>
-            <div name="ultima">
-                <h1>Project Ultima2</h1>
-                <p>It all started in the end of 2017, me and some friends started making a Minecraft Server (as every kid at this time). It was a cheap server but I started doing every games in Skript (A simplified Minecraft coding language).<br />The server was based on the Rush minigame that is played (and still played now) by 50-60% of the French MC community (way more skilled than your bedwars and shit lol). And after almost a year, it closed because I wasn't playing MC anymore.</p>
-                <img src="assets/projects/Ultima/show1.png" onclick='linkTo("assets/projects/Ultima/show1.png", "newpage")' style="margin-right: 40; border-radius: 10px; width: 500px;" /><img src="assets/projects/Ultima/show2.png" onclick='linkTo("assets/projects/Ultima/show2.png", "newpage")' style="border-radius: 10px; width: 500px;" />
-                <h1 style="margin-top: 50;">Ultima2 - Restarting from Zero</h1>
-                <p>And there we go, nostalgia hits and me and a friend, in January 2019 (it's been a while) we decide to restart from <b>ZERO</b>, and recreate all but better. Only ProtocolLib as external plugin, every plugin will be made by <u>US</u>. Time flies and the server is almost ready but we dont really wanna keep working on it, idk if it will come a day but with this year of hard-work, we learned a lot, was fun.</p>
-                <h1 style="margin-top: 50;">Not only a server, a whole network</h1>
-                <p>That's right, I worked myself a lot on the website. But this one is special, it is the center of the network, the plans where to have synchronized accounts between MC, the Website and the Discord Server (Spoiler: it is done). With that, you can chat with everyone on every platform, your IG rank doesn't only give you IG perks, but also Discord rewards and websites things. We can (with webhooks and a JSONAPI) control the network from the Website's admin panel, we can ban members from the network, write news, open/close/whitelist users etc...</p>
-                <p>All of this data where stored and synchronized between the website database and a MC plugin entierly made made by <a href="https://twitter.com/Thalrod_"><i style="color: #00acee;" class="fab fa-twitter"></i> <u>@Thalrod_</a></u></p>
-                <p>Current project progress:</p>
-                <ul>
-                    <li>Website : 90%</li>
-                    <li>Discord bot and webhooks : 30%</li>
-                    <li>Minecraft server : 80%</li>
-                    <li>Minecraft webhooks and JSONAPI : 100%</li>    
-                </ul>
-                <img src="assets/projects/Ultima/pluglist.png" onclick='linkTo("assets/projects/Ultima/pluglist.png", "newpage")' style="border-radius: 10px; width: 180; -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" />
-                <p><b>EDIT: My contributions on this project are now open source! -> <a href="thoughts/ultimaopensourced.html">Click here</a></b></p>
-            </div>
-            <div name="veddy">
-                <h1>Veddy</h1>
-                <p>This theme was supposed to be released, but I never did it for some reason. It is 99% done, and if you want to use it, just tell me on Twitter: <a href="https://twitter.com/LivenOff"><i style="color: #00acee;" class="fab fa-twitter"></i> <u>@LivenOff</a></u>, and I will eventually get motivated to finally release it</p>
-                <img src="assets/projects/Veddy/show1.png" onclick='linkTo("assets/projects/Veddy/show1.png", "newpage")' style="border-radius: 10px; width: 65%; -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" />
-            </div>
-            <div name="wd">
-                <h1>WazeDecoy</h1>
-                <p>PROJECT UPDATE: I will eventually release a GUI version of WazeDecoy, with that you will be able to place any decoy anywhere.</p>
-                <p>This is a C# program that, yes, place decoys on Waze. With that I place police around my house so people "slow down", at the beggining it was quite a joke but it turned into a reality</p>
-                <p>To achieve that, I used web proxy software to intercept Waze requests with its Protobuf API (www.rtproxy.waze) and I basically copied the login commands and the decoy placing command. No API token or anything, and I can also place decoy everywhere I want and create virtual traffic jams without being there.</p>
-                <p>This flaw is really powerfull and can lead to false informations in the app, or just by totally flooding the Waze map by fake reports.</p>
-                <img src="assets/projects/WazeDecoy/show1.png" onclick='linkTo("assets/projects/WazeDecoy/show1.png", "newpage")' style="width: 65%; -webkit-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); -moz-box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43); box-shadow: 0px 0px 17px 0px rgba(0,0,0,0.43);" />
-                <p>And I installed the program on a Raspberry Pi Zero (on raspbian buster) to make it run 24/7. (It's still C#, I used <a href="https://www.mono-project.com/" target="_blank">Mono</a> to run it on Raspbian.)</p>
-            </div>
-            <div id="error">
-                <h1>Error</h1>
-                <p>An error happened. Please contact me on Twitter so I can fix that: <a href="https://twitter.com/LivenOff"><i style="color: #00acee;" class="fab fa-twitter"></i> <u>@LivenOff</a></u></p>
-            </div>
-            <div id="Select">
-                <h1>Welcome to my projects page</h1>
-                <p>Please select a category, it's cold out there.</p>
-            </div>
-        </div>
+        </main>
     </body>
 </html>
+
